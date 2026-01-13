@@ -1,0 +1,25 @@
+let streak = 0;
+
+const streakEl = document.getElementById("streak");
+const progressEl = document.getElementById("progress");
+const btn = document.getElementById("btn");
+
+btn.addEventListener("click", function () {
+  streak = streak + 1;
+  streakEl.textContent = streak;
+
+  let percent = streak * 10;
+  if (percent > 100) {
+    percent = 100;
+  }
+
+  progressEl.style.width = percent + "%";
+
+  btn.classList.add("done");
+  btn.textContent = "Completed ✔";
+
+  setTimeout(function () {
+    btn.classList.remove("done");
+    btn.textContent = "Done Today";
+  }, 900);
+});
