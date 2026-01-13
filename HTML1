@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Habit Tracker & Weather</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+  
+    <div class="card">
+      <h1>Daily Habit</h1>
+      <p class="habit">Read 20 minutes</p>
+
+      <div class="streak">
+         Streak: <span id="streak">0</span> days
+      </div>
+
+      <div class="progress">
+        <div class="progress-bar" id="progress"></div>
+      </div>
+
+      <button id="btn">Done Today</button>
+    </div>
+
+   
+    <div class="card weather-card">
+      <h2>Weekly Weather</h2>
+      <iframe 
+        src="https://www.meteoblue.com/en/weather/widget/daily/?geoloc=detect&days=7&tempunit=CELSIUS&windunit=METER_PER_SECOND&precipunit=MILLIMETER&coloured=coloured&pictoicon=1&maxtemperature=1&mintemperature=1&windspeed=1&windgust=0&winddirection=0&uv=0&humidity=0&precipitation=1&precipitationprobability=1&spot=0&pressure=0&layout=light&user_key=94c01f9892f124ee&embed_key=ac6f1f2d251a3307&sig=2f16b6e4d7c89cc330b5ed8fe638f6fa5a058e3aaae3ab0ba42d50803c9812dc" 
+        frameborder="0" 
+        scrolling="NO" 
+        allowtransparency="true" 
+        sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox" 
+        style="width:100%; height:300px; border:0; overflow:hidden;">
+      </iframe>
+      <div class="widget-link"><a href="https://www.meteoblue.com/en/weather/week/index" target="_blank" rel="noopener">meteoblue</a></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
